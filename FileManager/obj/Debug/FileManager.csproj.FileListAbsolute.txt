@@ -1,0 +1,10 @@
+C:\Users\User\Desktop\Sisprog\FileManager\FileManager\FileManager\bin\Debug\FileManager.exe.config
+C:\Users\User\Desktop\Sisprog\FileManager\FileManager\FileManager\bin\Debug\FileManager.exe
+C:\Users\User\Desktop\Sisprog\FileManager\FileManager\FileManager\bin\Debug\FileManager.pdb
+C:\Users\User\Desktop\Sisprog\FileManager\FileManager\FileManager\obj\Debug\FileManager.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Sisprog\FileManager\FileManager\FileManager\obj\Debug\FileManager.Form1.resources
+C:\Users\User\Desktop\Sisprog\FileManager\FileManager\FileManager\obj\Debug\FileManager.Properties.Resources.resources
+C:\Users\User\Desktop\Sisprog\FileManager\FileManager\FileManager\obj\Debug\FileManager.csproj.GenerateResource.cache
+C:\Users\User\Desktop\Sisprog\FileManager\FileManager\FileManager\obj\Debug\FileManager.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Sisprog\FileManager\FileManager\FileManager\obj\Debug\FileManager.exe
+C:\Users\User\Desktop\Sisprog\FileManager\FileManager\FileManager\obj\Debug\FileManager.pdb

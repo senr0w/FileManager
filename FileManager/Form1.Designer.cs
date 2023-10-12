@@ -38,7 +38,12 @@
             this.Back = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.NewFolder = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.NewFolderText = new System.Windows.Forms.TextBox();
+            this.NewFile = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_Desktop
@@ -144,19 +149,66 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // NewFolder
+            // 
+            this.NewFolder.BackColor = System.Drawing.Color.NavajoWhite;
+            this.NewFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NewFolder.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NewFolder.Location = new System.Drawing.Point(517, 3);
+            this.NewFolder.Name = "NewFolder";
+            this.NewFolder.Size = new System.Drawing.Size(111, 31);
+            this.NewFolder.TabIndex = 0;
+            this.NewFolder.Text = "Новая папка";
+            this.NewFolder.UseVisualStyleBackColor = false;
+            this.NewFolder.Click += new System.EventHandler(this.NewFolder_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.NewFile);
+            this.panel2.Controls.Add(this.NewFolderText);
+            this.panel2.Controls.Add(this.NewFolder);
+            this.panel2.Location = new System.Drawing.Point(149, 481);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(633, 38);
+            this.panel2.TabIndex = 0;
+            // 
+            // NewFolderText
+            // 
+            this.NewFolderText.Location = new System.Drawing.Point(3, 9);
+            this.NewFolderText.Name = "NewFolderText";
+            this.NewFolderText.Size = new System.Drawing.Size(218, 20);
+            this.NewFolderText.TabIndex = 1;
+            // 
+            // NewFile
+            // 
+            this.NewFile.BackColor = System.Drawing.Color.Khaki;
+            this.NewFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NewFile.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NewFile.Location = new System.Drawing.Point(411, 3);
+            this.NewFile.Name = "NewFile";
+            this.NewFile.Size = new System.Drawing.Size(100, 31);
+            this.NewFile.TabIndex = 2;
+            this.NewFile.Text = "Файлик";
+            this.NewFile.UseVisualStyleBackColor = false;
+            this.NewFile.Click += new System.EventHandler(this.NewFile_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(843, 531);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.panel_FilesList);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "FileManager";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,6 +226,10 @@
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button NewFolder;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox NewFolderText;
+        private System.Windows.Forms.Button NewFile;
     }
 }
 

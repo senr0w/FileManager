@@ -86,7 +86,7 @@ namespace FileManager
         {
             Button button = (Button)sender;
             string filePath = button.Name;
-
+            textBox1.Text = filePath;
             try
             {
                 DisplayFiles(filePath);
@@ -97,6 +97,7 @@ namespace FileManager
                 process.StartInfo = new System.Diagnostics.ProcessStartInfo() { UseShellExecute = true, FileName = filePath };
                 process.Start();
             }
+          
         }
 
         private void Back_Click(object sender, EventArgs e)
@@ -108,6 +109,25 @@ namespace FileManager
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void NewFolder_Click(object sender, EventArgs e)
+        {
+            string Location = @"C:\Users\User\Desktop\Sisprog";
+            string path= System.IO.Path.Combine(Location, NewFolderText.Text);
+            System.IO.Directory.CreateDirectory(path);
+            MessageBox.Show("Папка сделана");
+        }
+
+        private void NewFile_Click(object sender, EventArgs e)
+        {
+            string Location= @"C:\Users\User\Desktop\Sisprog";
+            string file = System.IO.Path.Combine(Location, NewFolderText.Text+".docx");
+            if(!System.IO.File.Exists(file))
+            {
+                System.IO.File.Create(file);
+            }
+            MessageBox.Show("Намутил файлик");
         }
     }
 }
