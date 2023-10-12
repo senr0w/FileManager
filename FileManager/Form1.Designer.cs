@@ -40,8 +40,9 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.NewFolder = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.NewFolderText = new System.Windows.Forms.TextBox();
             this.NewFile = new System.Windows.Forms.Button();
+            this.NewFolderText = new System.Windows.Forms.TextBox();
+            this.Rename = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -165,6 +166,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.Rename);
             this.panel2.Controls.Add(this.NewFile);
             this.panel2.Controls.Add(this.NewFolderText);
             this.panel2.Controls.Add(this.NewFolder);
@@ -172,13 +174,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(633, 38);
             this.panel2.TabIndex = 0;
-            // 
-            // NewFolderText
-            // 
-            this.NewFolderText.Location = new System.Drawing.Point(3, 9);
-            this.NewFolderText.Name = "NewFolderText";
-            this.NewFolderText.Size = new System.Drawing.Size(218, 20);
-            this.NewFolderText.TabIndex = 1;
             // 
             // NewFile
             // 
@@ -192,6 +187,26 @@
             this.NewFile.Text = "Файлик";
             this.NewFile.UseVisualStyleBackColor = false;
             this.NewFile.Click += new System.EventHandler(this.NewFile_Click);
+            // 
+            // NewFolderText
+            // 
+            this.NewFolderText.Location = new System.Drawing.Point(3, 9);
+            this.NewFolderText.Name = "NewFolderText";
+            this.NewFolderText.Size = new System.Drawing.Size(218, 20);
+            this.NewFolderText.TabIndex = 1;
+            // 
+            // Rename
+            // 
+            this.Rename.BackColor = System.Drawing.Color.LemonChiffon;
+            this.Rename.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Rename.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Rename.Location = new System.Drawing.Point(280, 3);
+            this.Rename.Name = "Rename";
+            this.Rename.Size = new System.Drawing.Size(125, 31);
+            this.Rename.TabIndex = 3;
+            this.Rename.Text = "Переименовать";
+            this.Rename.UseVisualStyleBackColor = false;
+            this.Rename.Click += new System.EventHandler(this.Rename_Click);
             // 
             // Form1
             // 
@@ -230,6 +245,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox NewFolderText;
         private System.Windows.Forms.Button NewFile;
+        private System.Windows.Forms.Button Rename;
     }
 }
 

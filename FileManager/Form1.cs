@@ -122,12 +122,17 @@ namespace FileManager
         private void NewFile_Click(object sender, EventArgs e)
         {
             string Location= @"C:\Users\User\Desktop\Sisprog";
-            string file = System.IO.Path.Combine(Location, NewFolderText.Text+".docx");
+            string file = System.IO.Path.Combine(Location, NewFolderText.Text);
             if(!System.IO.File.Exists(file))
             {
                 System.IO.File.Create(file);
             }
             MessageBox.Show("Намутил файлик");
+        }
+
+        private void Rename_Click(object sender, EventArgs e)
+        {
+            Directory.Move(@"C:\\Users\\User\\Desktop\\Sisprog\\Folder", @"C:\\Users\\User\\Desktop\\Sisprog\\Test");
         }
     }
 }
