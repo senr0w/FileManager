@@ -16,20 +16,23 @@ namespace FileManager
         private string currentLocation;
         private string stringcurrentLocation;
 
+
         public Form1()
         {
             InitializeComponent();
             DisplayFiles(Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            var previousFolder = this.currentLocation.Substring(0, this.currentLocation.LastIndexOf("\\"));
+            textBox1.Text = previousFolder;
+            DisplayFiles(previousFolder);
         }
 
         private void button_Desktop_Click(object sender, EventArgs e)
         {
-
             DisplayFiles(Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
         }
 
@@ -91,18 +94,21 @@ namespace FileManager
             {
                 DisplayFiles(filePath);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 var process = new System.Diagnostics.Process();
                 process.StartInfo = new System.Diagnostics.ProcessStartInfo() { UseShellExecute = true, FileName = filePath };
                 process.Start();
+                
             }
           
         }
 
         private void Back_Click(object sender, EventArgs e)
         {
+            
             var previousFolder = this.currentLocation.Substring(0, this.currentLocation.LastIndexOf("\\"));
+            textBox1.Text = previousFolder;
             DisplayFiles(previousFolder);
         }
 
@@ -113,10 +119,14 @@ namespace FileManager
 
         private void NewFolder_Click(object sender, EventArgs e)
         {
+            try {
             string Location = @"C:\Users\User\Desktop\Sisprog";
             string path= System.IO.Path.Combine(Location, NewFolderText.Text);
             System.IO.Directory.CreateDirectory(path);
-            MessageBox.Show("Папка сделана");
+            MessageBox.Show("Папка сделана"); }
+            catch {
+                MessageBox.Show("Никакой тебе папки con"); ;
+            }
         }
 
         private void NewFile_Click(object sender, EventArgs e)
@@ -132,7 +142,9 @@ namespace FileManager
 
         private void Rename_Click(object sender, EventArgs e)
         {
-            Directory.Move(@"C:\\Users\\User\\Desktop\\Sisprog\\Folder", @"C:\\Users\\User\\Desktop\\Sisprog\\Test");
+            Directory.Move(@"C:\\Users\\User\\Desktop\\Sisprog\\Folder", @"C:\\Users\\User\\Desktop\\Sisprog\\Papka");
+            MessageBox.Show("Переименовал");
         }
+        
     }
 }
